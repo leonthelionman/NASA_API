@@ -6,9 +6,36 @@
 *{
   box-sizing: border-box;
 }
+body{
+  background-color: black;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
+#logo{
+  width: 50%;
+  float: left;
+}
+#title h1{
+  margin-top: 50px;
+  float: left;
+  color: white;
+}
+#allTitle{
+  float: left;
+}
+#main-center{
+  margin: auto;
+  width: 600px;
+}
+#input{
+  margin: auto;
+  float: left;
+}
+#title{
+  width: 600px;
+  margin: auto;
+}
 .center{
   margin: auto; 
   width: 600px;
@@ -19,12 +46,12 @@
   max-height: 100%;
   /* border: 1px solid red; */
 }
-
 #NASAwords{
   margin: auto; 
   width: 600px;
   /* border: 1px solid rgb(23, 175, 0); */
   text-align: justify;
+  color: white;
 }
 /******************************************
 /* ADDITIONAL STYLES

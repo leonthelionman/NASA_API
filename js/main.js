@@ -1,9 +1,11 @@
 //Example fetch using pokemonapi.co
-document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('#getPicDate').addEventListener('click', getInput)
 
-function getFetch(){
+function getInput(){
   const choice = document.querySelector('input').value
-  console.log(choice)
+  getFetch(choice)
+}
+function getFetch(choice){
 
   const url = `https://api.nasa.gov/planetary/apod?api_key=zU71SV2z8UAS2tpSRxtx9Ii4giGUAk6QIufK4bCn&date=${choice}`
 
@@ -12,7 +14,7 @@ function getFetch(){
       .then(data => {
         console.log(data)
         if( data.media_type === 'image' ){
-          document.querySelector('img').src = data.hdurl
+          document.querySelector('#NASApic').src = data.hdurl
         }else if(data.media_type === 'video'){
           document.querySelector('iframe').src = data.url
         }
@@ -24,3 +26,31 @@ function getFetch(){
       });
 }
 
+// Random date generator
+document.querySelector('#getRandom').addEventListener('click', getRandomDate)
+
+
+function getRandomDate() {
+  startDate = new Date(1990,0,1);
+  endDate = new Date(2020,11,31);
+  const minValue = startDate.getTime();
+  const maxValue = endDate.getTime();
+  const timestamp = Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
+  const date = new Date(timestamp)
+  formatDate(date)
+}
+
+function formatDate(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  const choice = [year, month, day].join('-');
+  getFetch(choice)
+}
