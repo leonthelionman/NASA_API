@@ -32,19 +32,27 @@ body{
   margin: auto;
   float: left;
 }
+#saveDateDIV{
+width: 20%;
+float: right;
+}
 #title{
   width: 600px;
   margin: auto;
 }
 .center{
+  display: flex;
   margin: auto; 
   width: 600px;
-  /* border: 1px solid rgb(23, 175, 0); */
 }
 #NASApic{
   max-width: 100%;
   max-height: 100%;
-  /* border: 1px solid red; */
+  margin-left: -50%;
+}
+#NASAvid{
+  max-width: 100%;
+  max-height: 100%;
 }
 #NASAwords{
   margin: auto; 
@@ -54,5 +62,23 @@ body{
   color: white;
 }
 /******************************************
-/* ADDITIONAL STYLES
+/* Table
 /*******************************************/
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+#myTable{
+  float:right;
+  margin-right: 1%;
+  margin-top: -10%;
+  width: 10%;
+}

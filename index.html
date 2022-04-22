@@ -10,6 +10,8 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<!-- external jquery link -->
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	</head>
 	<body>
 
@@ -29,15 +31,30 @@
 					<button id = "getRandom" type="button" name="button">Random</button>
 				</div>
 
+				<div id="saveDateDIV">
+					<button id = "saveDatetoTable" type="button" name="button">Save Date</button>
+				</div>
+
 			</div>
 		</div>
 
 		<div class="center">
+			<iframe id="NASAvid" src="" frameborder="0"></iframe>
 			<img id="NASApic" src="#" alt="">
 		</div>
 
 		<h3 id="NASAwords"></h3>
-	
+		
+		<table id="myTable">
+			<thead>
+				<tr>
+					<th colspan="3">Saved Dates</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
