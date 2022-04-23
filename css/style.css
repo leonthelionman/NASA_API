@@ -40,7 +40,12 @@ float: right;
   width: 600px;
   margin: auto;
 }
+
 .center{
+  margin: auto; 
+  width: 600px;
+}
+.overlay{
   display: flex;
   margin: auto; 
   width: 600px;
@@ -54,6 +59,8 @@ float: right;
   max-width: 100%;
   max-height: 100%;
 }
+
+
 #NASAwords{
   margin: auto; 
   width: 600px;
